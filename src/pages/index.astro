@@ -1,7 +1,9 @@
 ---
 import "primevue/resources/themes/lara-light-indigo/theme.css";
 
-import Teste from "../components/Teste.vue"
+// import PrimeButton from "primevue/button";
+import Teste from "../components/Teste.vue";
+import MussumIpsum from "../components/MussumIpsum.vue";
 ---
 
 <html lang="en">
@@ -13,7 +15,24 @@ import Teste from "../components/Teste.vue"
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<Teste />
+		<!-- <PrimeButton client:only="vue">teste</PrimeButton> -->
+		<section>
+			<h1>Astro</h1>
+			<p>
+				Testando a diretiva <code>client:visible</code>
+			</p>
+			<p>Observe a aba network no dev tools</p>
+		</section>
+		<hr>
+		<MussumIpsum />
+		<hr>
+		<section>
+			<h1>Astro</h1>
+			<p>
+				Testando a diretiva <code>client:visible</code>
+			</p>
+			<p>Observe a aba network no dev tools</p>
+		</section>
+		<Teste client:visible>teste 123 teste</Teste>
 	</body>
 </html>
